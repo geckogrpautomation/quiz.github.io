@@ -16,3 +16,11 @@ Code was written using VS Code and tested on Apache webserver running on a Raspb
 
 Page faceplates:
 
+
+![Web API's: Code Quiz Start Page](https://github.com/geckogrpautomation/quiz.github.io/blob/main/Web%20API's%20-%20Code%20Quiz%20Start%20Page.png?raw=true)
+
+![Web API's: Code Quiz](https://github.com/geckogrpautomation/quiz.github.io/blob/main/Web%20API's%20-%20Code%20Quiz%20Example.png?raw=true)
+
+![Finished - Too Many Wrong Answers](https://github.com/geckogrpautomation/quiz.github.io/blob/main/Finished%20-%20Too%20Many%20Wrong%20Answers.png?raw=true)
+
+![Finished - Congratulations](https://github.com/geckogrpautomation/quiz.github.io/blob/main/Finished%20-%20Congratulations.png?raw=true)
