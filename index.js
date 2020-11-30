@@ -7,12 +7,9 @@ var indexQuesObj = document.getElementById("indexQuestion");
 var indexStartQuizBtnObj = document.getElementById("indexStartQuizBtn");
 
 
-
-
 //Create event listeners
 indexStartQuizBtnObj.addEventListener("click", function() {
-  location.replace("./quiz.html");
-    
+  location.replace("./quiz.html");    
   });
 
   

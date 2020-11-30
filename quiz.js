@@ -75,22 +75,26 @@ function totalQuizTimeS(){
 
 function quizRightWrong(index,ans){
    
-console.log("question index is : " + index + "Answer is " + ans );
-//Quiz correct answer. Display Correct. Well done!
-if (quizCorrectAnswers[index] === ans){
-   
-    quizRightWrongObj.textContent = "Correct. Well done!";
-    quizRightWrongObj.style.display="inline";
-    nextQuesBtnObj.style.display="inline";
-}   
+    console.log("question index is : " + index + "Answer is " + ans );
+    //Quiz correct answer. Display Correct. Well done!
+    if (quizCorrectAnswers[index] === ans){
+    
+        quizRightWrongObj.textContent = "Correct. Well done!";
+        quizRightWrongObj.style.display="inline";
+        nextQuesBtnObj.style.display="inline";
+    }   
 
-//Quiz correct answer. Display "Incorrect! More study for yo
+    //Quiz correct answer. Display "Incorrect! More study for yo
 
-if (quizCorrectAnswers[index] !== ans){ 
-    quizRightWrongObj.textContent  = "Incorrect! Try again!";
-    quizRightWrongObj.style.display="inline";
-    quizTimeS = quizTimeS + 10;
-} 
+    if (quizCorrectAnswers[index] !== ans){ 
+        quizRightWrongObj.textContent  = "Incorrect! Try again!";
+        quizRightWrongObj.style.display="inline";
+        quizTimeS = quizTimeS - 10;
+    } 
+
+    if (quizTimeS <= 0){
+        endQuiz("highScoreSent","Too many wrong answers! Your score is " + quizTimeS + " sec." + " Enter your initials below.");
+    }
 
 }
 
@@ -149,8 +153,6 @@ switch (quizIndex){
 
     case 5:
  
-    quizQuesObj.textContent  = "Congratulation your score is " + quizTimeS + " sec." + " Enter your initials below.";
-
     quizBtnAObj.style.display = "none";
     quizBtnBObj.style.display = "none";
     quizBtnCObj.style.display = "none";
@@ -160,8 +162,7 @@ switch (quizIndex){
     answerCObj.style.display = "none";
     answerDObj.style.display = "none";
     quizTimeObj.style.display = "none";  
-    localStorage.setItem("highScoreSent", "Congratulations! Your score is " + quizTimeS + " sec." + " Enter your initials below."); 
-    location.replace("./finish.html");    
+    endQuiz("highScoreSent","Congratulations! Your score is " + quizTimeS + " sec." + " Enter your initials below.");
     break;
 
     default:
@@ -170,7 +171,14 @@ switch (quizIndex){
 }
 } 
 
-//Send required intems to the finish window.
+//Set required lcoal storage values for the next window to get
+function endQuiz(lStorageSetItem, val){
+    //Send required intems to the finish window.
+    localStorage.setItem(lStorageSetItem, val); 
+    location.replace("./finish.html");  
+
+}
+
 
     
                 
