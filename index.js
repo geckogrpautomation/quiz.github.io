@@ -11,7 +11,8 @@ var indexStartQuizBtnObj = document.getElementById("indexStartQuizBtn");
 
 //Create event listeners
 indexStartQuizBtnObj.addEventListener("click", function() {
-    window.location.href = "./quiz.html"; 
+  location.replace("./quiz.html");
+    
   });
 
   

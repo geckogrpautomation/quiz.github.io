@@ -4,13 +4,14 @@
 var thisWinHighScore = document.getElementById("highScore");
 
 //Get previous window variable quizTimeSent and write to this window's variable
-var prevWindowHScore = getPrevWinValues("quizTimeSent");
-thisWinHighScore.textContent = prevWindowHScore.textContent;
+var prevWindowHScore = getPrevWinValues("highScoreSent");
+
+thisWinHighScore.textContent = prevWindowHScore;
 
 //Get previous window variables function
 function getPrevWinValues(prevValue) {
-    var quizTime = sessionStorage.getItem(prevValue);
-    return prevValue;
+    var quizTime = localStorage.getItem(prevValue);
+    return quizTime;
 }
 
 

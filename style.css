@@ -1,0 +1,83 @@
+  body {
+    background-color: gainsboro;
+    opacity: 75%;
+  }
+
+  .col-lg-6 h2{
+
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+
+  }
+
+  .col-lg-6 h3{
+
+    margin: auto;
+    text-align: center;
+    padding: 25px;
+
+  }
+
+  h4 {
+
+    font-size: 16px;
+
+  }
+
+  .btnFlex{
+
+    display: flex; 
+    justify-content: center;
+    padding: 20px;
+    margin: 5px;
+}
+
+  .question{
+
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .btn-primary{
+
+    padding: 20px;
+    margin: 5px;
+
+  }
+  
+  h4 {
+
+    padding: 20px;
+    
+  }
+
+  #finishLinePic{
+
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+    
+  #startLineImg{
+
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+   #form-control{
+
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+
+    

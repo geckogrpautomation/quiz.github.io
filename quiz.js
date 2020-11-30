@@ -160,23 +160,20 @@ switch (quizIndex){
     answerCObj.style.display = "none";
     answerDObj.style.display = "none";
     quizTimeObj.style.display = "none";  
-    callFinishWindow();     
+    localStorage.setItem("highScoreSent", "Congratulations! Your score is " + quizTimeS + " sec." + " Enter your initials below."); 
+    location.replace("./finish.html");    
     break;
 
-   default:
-   break;    
+    default:
+    break;    
    
 }
 } 
 
-//sSend required intems to the finish window.
-function callFinishWindow(){
-    
-        var qt = document.getElementById("quizTime").id;
-        sessionStorage.setItem("quizTimeSent", quizTimeObj);
-        window.open("finish.html","_blank");  
+//Send required intems to the finish window.
 
-}
+    
+                
 
 
 

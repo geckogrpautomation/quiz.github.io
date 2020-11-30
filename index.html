@@ -13,41 +13,47 @@
 <body class = "body">
 
     <!-- Start fluid container-->
-    <div class= "container-fluid">
+    <div class= ".container-sm">
 
         <!-- Start first row-->   
         <div class="row">
     
-            <!-- Empty column 1-3-->   
-            <div class= "col col-lg-3"></div>     
+                <!-- Empty column 1-3-->   
+                <div class= "col col-lg-3">
+
+                </div>     
 
                 <!-- Empty column 4-9-->
-                <div class= "col col-lg-6">
+                <div class= "col col-lg-6" style= "text-align: center;">
 
                     <h2 class= "heading">Coding Quiz Challenge</h2>
-
                     
                     <h3 id= "question">Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalise your score/time by ten seconds</h3>
+                    
+                    <!-- Draw line--> 
                     <hr size=2 noshade>
-                    <!--Start line image.-->
-                    <div class = "row">
-                        <div class= "col col-lg-12 ">
-                        <img id= "startLineImg" src="./startLine.jpg" alt="Start line picture" style = "size: 100%;">
-                        </div>
-                    </div>                   
+
+                    <!--Starting line image--> 
+                    <img id= "startLineImg" src="./startLine.jpg" alt="Start line picture" style = "size: 100%;">
+                    
+                    <!-- Draw line--> 
+                    <hr size=2 noshade>      
                                     
                     <div class = "row">
-                    <div class= "col col-lg-12 ">
-                        <div class= "btnFlex">
-                            <input type="button" class = "btn btn-primary" id= "indexStartQuizBtn"  value="Start Quiz" >
-                        </div>
-                    </div>                              
-                                    
-                </div>   
+                        <div class= "col col-lg-12">
+                            <div class= "btnFlex">
+                                <input type="button" class = "btn btn-primary" id= "indexStartQuizBtn"  value="Start Quiz" >
+                            </div>
+                        </div>                       
+                    </div>
+
+                </div>
 
                 <!-- Empty column 10-12-->   
-            <div class= "col col-lg-3"></div>  
-            <hr size=2 noshade>  
+                <div class= "col col-lg-3">
+
+                </div>  
+                <hr size=2 noshade>  
 
     </div> 
     <!-- End fluid container-->
