@@ -42,7 +42,7 @@ console.log(userName.value);
 if (lastHS ===  null || lastHS === undefined) {
     localStorage.setItem(userName.value , thisHS);
     
-  } else if (lastHS != "null" && parseInt(lastHS) >= parseInt(thisHS)) {
+  } else if ((lastHS != "null") && (parseInt(lastHS) >= parseInt(thisHS)) && (lastHS > 0)) {
     localStorage.setItem(userName.value , thisHS);
 
   } else {
