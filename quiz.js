@@ -93,7 +93,7 @@ function quizRightWrong(index,ans){
     } 
 
     if (quizTimeS <= 0){
-        endQuiz("highScoreSent","Too many wrong answers! Your score is " + quizTimeS + " sec." + " Enter your initials below.");
+        endQuiz("highScoreSent", quizTimeS + " sec");
     }
 
 }
@@ -162,7 +162,7 @@ switch (quizIndex){
     answerCObj.style.display = "none";
     answerDObj.style.display = "none";
     quizTimeObj.style.display = "none";  
-    endQuiz("highScoreSent","Congratulations! Your score is " + quizTimeS + " sec." + " Enter your initials below.");
+    endQuiz("highScoreSent", quizTimeS + " sec");
     break;
 
     default:
@@ -174,7 +174,7 @@ switch (quizIndex){
 //Set required lcoal storage values for the next window to get
 function endQuiz(lStorageSetItem, val){
     //Send required intems to the finish window.
-    localStorage.setItem(lStorageSetItem, val); 
+    sessionStorage.setItem(lStorageSetItem, val); 
     location.replace("./finish.html");  
 
 }
