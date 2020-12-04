@@ -34,4 +34,4 @@ FINSIHED CONGRATULATIONS. ENTER SCORE
 
 SCORE BOARD
 
-![High Score] (highscore.png)
+![High Score](https://github.com/geckogrpautomation/quiz.github.io/blob/main/highscore.png?raw=true)
