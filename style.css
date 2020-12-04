@@ -31,7 +31,7 @@
 
     display: flex; 
     justify-content: center;
-    padding: 3%;
+    padding: 2%;
     margin: 1%;
 }
 
@@ -42,7 +42,7 @@
     margin-left: auto;
     margin-left: auto;
     max-width: 100% ;
-    padding: 5%;
+    padding: 2%;
   }
 
   .btn-primary{
@@ -91,7 +91,51 @@
 
   }
 
- 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  
+.flex{
+
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  }
+
+.flexTableItem{  
+  min-width: 50%;
+  vertical-align: middle;
+  text-align: center;
+   }
+   
+  .flexTableItem th td {      
+    border: 1px solid black;
+    vertical-align: middle;
+  }
+
+  .flexTableItem thead {
+    background-color: #007BFF;
+    color: #ffffff;               
+  }
+
+  .flexTableItem   th {
+    text-align: center;
+    height: 50px;
+    min-width: 50%;        
+  }
+
+  .flexTableItem tbody tr:nth-child(odd) {
+    background: #ffffff;
+  }
+
+.flexTableItem tbody tr:nth-child(even) {
+    background: #f4f4f4;
+  }
+
+
+
   @media (max-width: 576px) {
 
     h2 {
@@ -125,6 +169,7 @@
       margin: 1%;
       float: right;
     }
+
 
 
 }

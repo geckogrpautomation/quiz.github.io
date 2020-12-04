@@ -3,10 +3,50 @@
 
 //Intialise variables
 var quizIndex = 0;
-var quizTimeS = 0;
 var rightWrong  = "";
-var quizCorrectAnswers = ["c", "c", "d", "c", "d"];
+var quizTimeS = 75;
 
+
+// Quiz question, choices and answer data object
+var questions = [
+    {
+      question: "Commonly used data types DO NOT include:",
+      choices: ["A - strings", "B - booleans", " C - alerts", "D - numbers"],
+      answer: "c"
+    },
+
+    {
+      question: "The condition in an if / else statement is enclosed within ____.",
+      choices: ["A - quotes", "B - curly brackets", "C - parentheses", "D - quare brackets"],
+      answer: "c"
+    },
+
+    {
+      question: "Arrays in JavaScript can be used to store ____.",
+      choices: ["numbers and strings","other arrays","booleans","all of the above"],
+      answer: "d"
+    },
+
+    {
+      question:"String values must be enclosed within ____ when being assigned to variables.",
+      choices: ["commas", "curly brackets", "quotes", "parentheses"],
+      answer: "c",
+    },
+
+    {
+      question:"A very useful tool used during development and debugging for printing content to the debugger is:",
+      choices: ["JavaScript", "terminal / bash", "for loops", "console.log"],
+      answer: "d",
+    },
+
+    {
+        question:"question",
+        choices: ["a", "b", "c", "d"],
+        answer: "answer",
+    }
+  ];
+
+  
 
 //Get required objects
 var quizHeadingObj = document.getElementById("quizHeading");
@@ -66,18 +106,15 @@ var quizCurTime = setInterval( totalQuizTimeS, 1000);
 
 
 function totalQuizTimeS(){
-    quizTimeS++;
-    console.log(quizTimeS);
+    quizTimeS--;
     quizTimeObj.textContent = "Quiz Time : " + quizTimeS + " sec";
 }
 
 
-
 function quizRightWrong(index,ans){
    
-    console.log("question index is : " + index + "Answer is " + ans );
     //Quiz correct answer. Display Correct. Well done!
-    if (quizCorrectAnswers[index] === ans){
+    if (questions[quizIndex].answer=== ans){
     
         quizRightWrongObj.textContent = "Correct. Well done!";
         quizRightWrongObj.style.display="inline";
@@ -86,7 +123,7 @@ function quizRightWrong(index,ans){
 
     //Quiz correct answer. Display "Incorrect! More study for yo
 
-    if (quizCorrectAnswers[index] !== ans){ 
+    if (questions[quizIndex].answer !== ans){ 
         quizRightWrongObj.textContent  = "Incorrect! Try again!";
         quizRightWrongObj.style.display="inline";
         quizTimeS = quizTimeS - 10;
@@ -98,78 +135,21 @@ function quizRightWrong(index,ans){
 
 }
 
-function quizQuesIndex(){
+function quizQuesIndex(i){
 
-//Quiz state
-switch (quizIndex){
-    
-    case 0:
-       
-       quizQuesObj.textContent  = "Commonly used data types DO NOT include:";
-       answerAObj.textContent = "A - strings"; 
-       answerBObj.textContent = "B - booleans";
-       answerCObj.textContent = "C - alerts";
-       answerDObj.textContent = "D - numbers";
-       break;
-          
-    case 1:
-     
-       quizQuesObj.textContent  = "The condition in an if / else statement is enclosed within _________";
-       answerAObj.textContent = "A - quotes"; 
-       answerBObj.textContent = "B - curly brackets" ;
-       answerCObj.textContent = "C - parenthesis";
-       answerDObj.textContent = "D - square brackets";
-       break;
- 
-    case 2:
-       
-       quizQuesObj.textContent  = "Arrays in Javascript can be used to store _________";
-       answerAObj.textContent = "A - numbers & strings"; 
-       answerBObj.textContent= "B - other arrays";
-       answerCObj.textContent = "C - booleans";
-       answerDObj.textContent = "D - all of the above";
-       
-       break;
-
-   case 3:
-      
-       quizQuesObj.textContent  = "String values must be enclosed with __________ when being assigned to variables";
-       answerAObj.textContent  = "A - commas"; 
-       answerBObj.textContent = "B - curly brackets";
-       answerCObj.textContent = "C - quotes";
-       answerDObj.textContent = "D - parenthesis";
-       
-       break;
-
-   case 4:
-      
-       quizQuesObj.textContent  = "A very useful tool used during development and debugging for printing content to the debugger is:";
-       answerAObj.textContent  = "A - javascript"; 
-       answerBObj.textContent = "B - terminal/bash" ;
-       answerCObj.textContent = "C - for loops";
-       answerDObj.textContent = "D - console log";
-       
-       break;
-
-    case 5:
- 
-    quizBtnAObj.style.display = "none";
-    quizBtnBObj.style.display = "none";
-    quizBtnCObj.style.display = "none";
-    quizBtnDObj.style.display = "none";
-    answerAObj.style.display = "none";
-    answerBObj.style.display = "none";
-    answerCObj.style.display = "none";
-    answerDObj.style.display = "none";
-    quizTimeObj.style.display = "none";  
+    quizQuesObj.textContent  = questions[i].question;
+    answerAObj.textContent = questions[i].choices[0];
+    answerBObj.textContent = questions[i].choices[1];
+    answerCObj.textContent = questions[i].choices[2];
+    answerDObj.textContent = questions[i].choices[3];
+  
+if (i === 5){
+   
     endQuiz("highScoreSent", quizTimeS + " sec");
-    break;
-
-    default:
-    break;    
+    }   
    
 }
-} 
+
 
 //Set required lcoal storage values for the next window to get
 function endQuiz(lStorageSetItem, val){

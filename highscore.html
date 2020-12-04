@@ -23,15 +23,28 @@
             <!--Define column 6 for large devices and column 12 for smaller devices-->   
             <div class= "col col-lg-6 col-sm-12">
                 <!--heading and high score--> 
-                <h2 class= "heading">Coding Quiz Challenge</h2>                    
-                <h3 id= "question">Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalise your score/time by ten seconds</h3>
+                <h2 class= "heading">Score Board</h2> 
+                <div class= "btnFlex">
+                    <input type="button" class = "btn btn-primary" id= "rtnStartQuiz"  value="Home">
+                </div>                        
                 <!-- Draw horizontal line--> 
                 <hr size=2 noshade>
                 <!--Starting line image--> 
-                <div class= "btnFlex">
-                    <input type="button" class = "btn btn-primary" id= "indexStartQuizBtn"  value="Start Quiz">
-                    <input type="button" class = "btn btn-primary" id= "highScoreBtn"  value="High Score">
-                </div>                               
+                <div class = "flex">
+    
+                    <div class = "flexTableItem">
+                        <table>
+                            <thead>        
+                                <tr>
+                                  <th>Name</th>
+                                  <th>Score</th>
+                                </tr>
+                            </thead>                
+                            <tbody id = "ulHighScore">                   
+                            </tbody>            
+                        </table>     
+                    </div>
+                </div>                
                 <!-- Draw line--> 
                 <hr size=2 noshade>  
             </div>
@@ -49,5 +62,5 @@
 <!--Include Bootsrap JS bundle for Bootsrap compnenets and classes etc..--> 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <!--Include local JS file-->
-<script src="./index.js"></script>
+<script src="./highscore.js"></script>
 </html>
