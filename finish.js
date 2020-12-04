@@ -8,7 +8,13 @@ var userName = document.getElementById("nameInput");
 //Get previous window variable quizTimeSent and write to this window's variable
 var usrHS = getPrevWinValues("highScoreSent");
 
-thisWinHighScore.textContent = "Your High Score is : " + usrHS;
+if (parseInt(usrHS)<=0){
+  thisWinHighScore.textContent = "Too many wrong answers. Please try again : " + usrHS;
+}else{thisWinHighScore.textContent = "Congratulations your score is : " + usrHS;
+}
+
+
+
 
 //Get previous window variables function
 function getPrevWinValues(prevValue) {
