@@ -18,7 +18,7 @@ Page faceplates:
 
 QUIZ START PAGE:
 
-![Web API's: Code Quiz Start Page](https://github.com/geckogrpautomation/quiz.github.io/blob/main/Web%20API's%20-%20Code%20Quiz%20Start%20Page.png?raw=true)
+![Web API's: Code Quiz Start Page](https://github.com/geckogrpautomation/quiz.github.io/blob/main/quizstart.png?raw=true)
 
 QUIZ
 
